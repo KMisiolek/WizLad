@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwyffxksrx0qg"]
+
+[ext_resource type="Script" path="res://red_potion.gd" id="1_8bvnr"]
+[ext_resource type="Texture2D" uid="uid://dhujrg65fus" path="res://sprites/redpotion.png" id="1_guydb"]
+[ext_resource type="AudioStream" uid="uid://eagboe8rg676" path="res://audio/344267__inspectorj__glass-smash-bottle-b.wav" id="3_6r6yb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vyhw1"]
+radius = 90.0222
+
+[node name="red_potion" type="CharacterBody2D"]
+script = ExtResource("1_8bvnr")
+
+[node name="Redpotion" type="Sprite2D" parent="."]
+texture = ExtResource("1_guydb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_vyhw1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6r6yb")

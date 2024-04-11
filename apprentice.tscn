@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt3btnxlnffbd"]
+
+[ext_resource type="Script" path="res://apprentice.gd" id="1_4b64n"]
+[ext_resource type="Texture2D" uid="uid://njxmcwjirnxt" path="res://sprites/apprentice.png" id="1_tppxq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42rde"]
+size = Vector2(178, 144)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_4b64n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -55)
+shape = SubResource("RectangleShape2D_42rde")
+debug_color = Color(1, 0, 0.160784, 0.419608)
+
+[node name="Apprentice" type="Sprite2D" parent="."]
+texture = ExtResource("1_tppxq")
+
+[node name="ThrowingArm" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(67, -31)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bptv0iu2qgdnk"]
+
+[ext_resource type="Texture2D" uid="uid://b4bsjy5xap2co" path="res://sprites/greenpotion.png" id="1_a0kje"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Greenpotion" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_a0kje")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-26, -83, -24, -52, -75, 80, 76, 79, 17, -49, 21, -83)

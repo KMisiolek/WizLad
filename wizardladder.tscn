@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvelnlv4sv1nb"]
+
+[ext_resource type="Script" path="res://wizard.gd" id="2_1gmd8"]
+[ext_resource type="PackedScene" uid="uid://pqctwaa1q4mw" path="res://wizard.tscn" id="2_y2gvq"]
+[ext_resource type="PackedScene" uid="uid://bt3btnxlnffbd" path="res://apprentice.tscn" id="3_apbyd"]
+[ext_resource type="PackedScene" uid="uid://beicbdstssd0j" path="res://ladder.tscn" id="3_u6n7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wctb7"]
+size = Vector2(948, 26)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Area2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 1152.0
+offset_bottom = 651.0
+color = Color(0.564706, 0.65098, 0.835294, 1)
+
+[node name="Floor (breaks potions)" type="CollisionShape2D" parent="Background"]
+position = Vector2(476, 634)
+shape = SubResource("RectangleShape2D_wctb7")
+debug_color = Color(0.886275, 0, 0.172549, 0.694118)
+
+[node name="wizard" parent="." instance=ExtResource("2_y2gvq")]
+unique_name_in_owner = true
+position = Vector2(1053, 584)
+script = ExtResource("2_1gmd8")
+
+[node name="apprentice" parent="." instance=ExtResource("3_apbyd")]
+position = Vector2(316, 273)
+
+[node name="ladder" parent="." instance=ExtResource("3_u6n7g")]
+position = Vector2(276, -18)
